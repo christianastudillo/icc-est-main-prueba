@@ -30,17 +30,34 @@ public class MetodosOrdenamientoBusquedaGrupoB {
      * @param cars Un arreglo de objetos Carro que se desea ordenar.
      */
     public void sortBYearWithBubbleAvnAsendente(Carro[] cars) {
+        // int n = cars.length;
+        // for (int i = 0; i < n - 1; i++) {
+        //     for (int j = 0; j < n - i - 1; j++) {
+        //         if (cars[j].getYear() > cars[j + 1].getYear()) {
+        //             Carro temp = cars[j];
+        //             cars[j] = cars[j + 1];
+        //             cars[j + 1] = temp;
+        //         }
+        //     }
+        // }
+        
         int n = cars.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
+        int i = 0;
+        while (i < n - 1) {
+            int j = 0;
+            while (j < n - i - 1) {
                 if (cars[j].getYear() > cars[j + 1].getYear()) {
-                    // Swap cars[j] and cars[j+1]
                     Carro temp = cars[j];
                     cars[j] = cars[j + 1];
                     cars[j + 1] = temp;
                 }
+                j++;
             }
-        }
+        i++;
+    }
+
+
+        
     }
 
     // Selection sort by year Descendentemente

@@ -65,8 +65,15 @@ public class App {
         System.out.println("Listado de carros generadas:");
 
         MetodosOrdenamientoBusquedaGrupoB metodos = new MetodosOrdenamientoBusquedaGrupoB();
+        System.out.println("------------------------------------------------");
+        System.out.println("Lista de carros ordenados por año (burbuja ascendente):");
         metodos.sortBYearWithBubbleAvnAsendente(carros);
         metodos.showCars(carros);
+        System.out.println("------------------------------------------------");
+        System.out.println("Lista de carros ordenados por año (burbuja descendente):");
+        metodos.sortBYearWithBubbleAvnDesendente(carros);
+        metodos.showCars(carros);
+
 
         int result = metodos.searchBinaryByYear(carros, 200);
         if (result == -1) {
@@ -74,5 +81,7 @@ public class App {
         } else {
             System.out.println("El carro se encuentra en la posicion: " + result);
         }
+        
+        
     }
 }
